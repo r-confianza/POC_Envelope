@@ -1,0 +1,62 @@
+.acceptence_status {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    max-width: 320px;
+    z-index: 9;
+    max-height: 580px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -4px;
+    overflow: hidden auto;
+}
+.acceptence_status::-webkit-scrollbar{
+    display: none;
+}
+.acceptence_status img{
+    max-width: 97px;
+}
+.acceptence_status .closeBtn{
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 32px;
+    color: #c8c8c8;
+}
+
+.form_field label{
+    color: #acabab;
+    display: block;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 4px;
+    padding-left: 10px;
+
+}
+.form_field textarea{
+    width: 100%;
+    border: 0;
+    padding: 14px 12px;
+    border-radius: 16px;
+    color: #b9b9b9;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.form_field textarea::placeholder{
+    color: #b9b9b9;
+}
+.submit_btn{
+    color: #fff;
+    background-color: #ff8db3;
+    border: none;
+    width: 100%;
+    padding: 23px 20px;
+    border-radius: 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}

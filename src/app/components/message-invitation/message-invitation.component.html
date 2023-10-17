@@ -1,0 +1,15 @@
+<div class="acceptence_status">
+    <div class="d-flex justify-content-between align-items-center header_pop">
+        <img src="../../../assets/images/invite.png" draggable="false" alt="invite">
+        <button class="closeBtn" >&times;</button>
+    </div>
+
+    <form  class="mt-5" >
+        <div class="form_field text-start mb-4">
+            <label>message</label>
+            <textarea [(ngModel)]="message" name="message" placeholder="What do you want to say?" rows="8"></textarea>
+        </div>
+
+        <button type="submit" (click)="submit()" class="submit_btn">ok</button>
+    </form>
+</div>

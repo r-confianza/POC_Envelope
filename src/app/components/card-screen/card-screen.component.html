@@ -1,0 +1,55 @@
+<section class="card_wrapper">
+  <!-- MOBILE FRAME HEADER -->
+  <div class="mobile_header"></div>
+
+  <!-- MOBILE FRAME BODY -->
+  <div class="mobile_body">
+    <div class="wedding-card">
+      <!-- INNER VIDEO SECTION -->
+      <video src="https://confianzaitsolutions.com/SampleForm/Invitation.mp4" [hidden]="videoAnimationState !== 'final'"
+        autoplay></video>
+      <!-- CARD FLAPS SECTION -->
+      <section class="card_outer">
+        <div class="animation-container">
+          <button (click)="toggleAnimation()" class="peral_btn slowHide_btn" [@buttonHide]="buttonState">
+            <img src="../../../assets/images/peral.png" draggable="false" alt="flap">
+          </button>
+          <div class="left-text" [@panAnimationLeft]="leftAnimationState">
+            <img src="../../../assets/images/front.png" draggable="false" alt="flap">
+          </div>
+          <div class="right-text" [@panAnimationRight]="rightAnimationState">
+            <img src="../../../assets/images/flap.png" draggable="false" alt="flap">
+            <div class="flap_content">
+              <label>invitation</label>
+            </div>
+            <div class="hand">
+              <img src="../../../assets/images/hand.png" draggable="false" alt="hand">
+            </div>
+          </div>
+        </div>
+
+        <!-- YOUR ACCEPTENCE POP OVER SECTION -->
+        <app-pop-up></app-pop-up>
+      </section>
+
+      <div class="playPause_btns">
+        <button type="button">
+          <img src="../../../assets/images/play.svg" draggable="false" alt="play">
+        </button>
+        <button type="button">
+          <img src="../../../assets/images/pause.svg" draggable="false" alt="play">
+        </button>
+      </div>
+
+      <marquee class="marquee">
+        <ng-container *ngFor="let data of userData">
+          First Name: {{ data.firstname }},
+          Message: {{ data.message }},
+        </ng-container>
+      </marquee>
+    </div>
+  </div>
+
+  <!-- MOBILE FRAME FOOTER -->
+  <div class="mobile_footer"></div>
+</section>

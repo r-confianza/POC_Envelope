@@ -1,0 +1,92 @@
+.bottom_action_btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+}
+
+.action_btn{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background: #fff;
+    padding: 5px;
+    border-radius: 9px;
+    box-shadow: 0 0 8px -2px #24344c;
+}
+
+.action_btn img{
+    max-width: 100%;
+}
+.popover_body{
+    background: #fff;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 320px;
+    transition: 0.8s all;
+    overflow: hidden;
+    border-radius: 50px 50px 0 0;
+}
+
+.popover_body.popOver-open{
+    height: 90%;
+}
+.header_pop{
+    padding: 20px;
+}
+.header_pop img{
+    max-width: 97px;
+}
+.header_pop button{
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 32px;
+    color: #c8c8c8;
+}
+.choose_status h3{
+    text-transform: capitalize;
+    color: #000;
+    font-size: 22px;
+    text-align: left;
+    padding: 0 20px;
+}
+.choose_status ul{
+    margin: 0;
+    padding: 20px;
+    overflow: hidden auto;
+    max-height: 43vh;
+}
+.choose_status ul::-webkit-scrollbar{
+    display: none;
+}
+.choose_status ul li{
+    display: block;
+}
+.choose_status ul li button{
+    background: #fafafa;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 16px;
+}
+.choose_status ul li button img{
+    width: 56px;
+    height: 56px;
+    margin-right: 12px;
+}

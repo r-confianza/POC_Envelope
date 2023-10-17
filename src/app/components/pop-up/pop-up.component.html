@@ -1,0 +1,44 @@
+<div class="bottom_action_btns">
+    <button type="button" class="action_btn">
+        <img src="../../../assets/images/map.gif" alt="icon" draggable="false">
+    </button>
+    <button type="button" class="action_btn" (click)="addClass()">
+        <img src="../../../assets/images/action.gif" alt="icon" draggable="false">
+    </button>
+</div>
+<div class="popover_body" [ngClass]="{'popOver-open': isClassAdded}">
+    <div class="d-flex justify-content-between align-items-center header_pop">
+        <img src="../../../assets/images/invite.png" draggable="false" alt="invite">
+        <button (click)="removeClass()">&times;</button>
+    </div>
+
+    <div class="choose_status">
+        <h3>RSVP</h3>
+        <ul>
+            <li>
+                <button type="button" (click)="yes()">
+                    <img src="../../../assets/images/tick.svg" alt="icon" draggable="false">
+                    yes
+                </button>
+            </li>
+            <li>
+                <button type="button" (click)="mayBe()">
+                    <img src="../../../assets/images/clock.svg" alt="icon" draggable="false">
+                    maybe
+                </button>
+            </li>
+            <li>
+                <button type="button" (click)="no()">
+                    <img src="../../../assets/images/sad.svg" alt="icon" draggable="false">
+                    no
+                </button>
+            </li>
+            <li>
+                <button type="button" (click)="message()">
+                    <img src="../../../assets/images/msg.svg" alt="icon" draggable="false">
+                    message
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
