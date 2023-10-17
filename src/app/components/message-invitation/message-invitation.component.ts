@@ -13,12 +13,10 @@ export class MessageInvitationComponent {
   isClassAdded = false;
   message: string = '';
 
-
-
-  constructor(private router: Router, private messageService : MessageServiceService) {
+  constructor(private router: Router, private messageService: MessageServiceService) {
 
   }
-  ngOnIt(){
+  ngOnIt() {
   }
 
 
@@ -28,16 +26,15 @@ export class MessageInvitationComponent {
 
   submit() {
     debugger
-    const randomLocationX = Math.floor(Math.random() * (51 - 42) + 42);
-    const randomLocationY = Math.floor(Math.random() * (51 - 42) + 42);
-    let obj ={
-      locationx:randomLocationX,
-      locationy:randomLocationY,
-      firstname:"john",
-      message:this.message,
-      speed:10,
+    const randomSpeed = Math.floor(Math.random() * 50) + 1;
+    let top = this.messageService.getUserDataCollection().length * 10;
+    let obj = {
+      firstname: "john",
+      top: top + "%",
+      message: this.message + "" + top,
+      speed: randomSpeed,
 
     }
     this.messageService.addUserData(obj);
-}
+  }
 }

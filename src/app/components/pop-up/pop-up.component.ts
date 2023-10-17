@@ -11,6 +11,7 @@ export class PopUpComponent {
 
   paymenytConfirmModelRef !: NgbModalRef;
   isClassAdded = false;
+  isClassMapAdded = false;
   
 
   constructor(public modelService: NgbModal, private router: Router) {
@@ -22,6 +23,11 @@ export class PopUpComponent {
 
   addClass() {
     this.isClassAdded = true;
+  }
+
+  addMapClass() {
+    debugger
+    this.isClassMapAdded = true;
   }
 
   removeClass() {

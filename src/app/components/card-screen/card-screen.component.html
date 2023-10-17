@@ -6,7 +6,7 @@
   <div class="mobile_body">
     <div class="wedding-card">
       <!-- INNER VIDEO SECTION -->
-      <video src="https://confianzaitsolutions.com/SampleForm/Invitation.mp4" [hidden]="videoAnimationState !== 'final'"
+      <video id="videoPlayer" src="https://confianzaitsolutions.com/SampleForm/Invitation.mp4" [hidden]="videoAnimationState !== 'final'"
         autoplay></video>
       <!-- CARD FLAPS SECTION -->
       <section class="card_outer">
@@ -33,20 +33,27 @@
       </section>
 
       <div class="playPause_btns">
-        <button type="button">
+        <button type="button" (click)="playVideo()">
           <img src="../../../assets/images/play.svg" draggable="false" alt="play">
         </button>
-        <button type="button">
+        <button type="button" (click)="pauseVideo()">
           <img src="../../../assets/images/pause.svg" draggable="false" alt="play">
         </button>
       </div>
 
-      <marquee class="marquee">
-        <ng-container *ngFor="let data of userData">
+      <ng-container>
+        <marquee class="marquee" scrolldelay="data.speed"  [style.top]="data.top" *ngFor="let data of userData" >
+          <span>First Name: {{ data.firstname }},
+            Message: {{ data.message }},</span>
+        </marquee>
+      </ng-container>
+<!-- 
+      <marquee class="marquee" scrolldelay="data.speed" *ngFor="let data of userData">
+        <ng-container >
           First Name: {{ data.firstname }},
           Message: {{ data.message }},
         </ng-container>
-      </marquee>
+      </marquee> -->
     </div>
   </div>
 

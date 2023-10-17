@@ -209,6 +209,28 @@
     z-index: 99;
 }
 
+.marquee {
+    animation: marquee-scroll 5s linear infinite;
+  }
+  
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+.marquee span{
+    background: #d5af6b;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 13px;
+    text-transform: capitalize;
+    border-radius: 50px;
+    display: inline-block;
+}
+
 
 @media all and (max-width:768px){
        .left-text{

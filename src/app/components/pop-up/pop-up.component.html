@@ -1,10 +1,13 @@
 <div class="bottom_action_btns">
-    <button type="button" class="action_btn">
+    <button type="button" class="action_btn" (click)="addClass()">
         <img src="../../../assets/images/map.gif" alt="icon" draggable="false">
     </button>
-    <button type="button" class="action_btn" (click)="addClass()">
+    <button type="button" class="action_btn" (click)="addMapClass()">
         <img src="../../../assets/images/action.gif" alt="icon" draggable="false">
     </button>
+</div>
+<div class="popover_body" [ngClass]="{'popOver-open': isClassMapAdded}">
+    <button (click)="removeClass()">&times;</button>
 </div>
 <div class="popover_body" [ngClass]="{'popOver-open': isClassAdded}">
     <div class="d-flex justify-content-between align-items-center header_pop">
@@ -41,4 +44,7 @@
             </li>
         </ul>
     </div>
+    <!-- <div class="choose_status_2">
+        <button>RSVP</button>
+    </div> -->
 </div>
