@@ -8,8 +8,6 @@ import { Router } from '@angular/router';
 })
 export class SuccessPageComponent {
 
-
-
   constructor(private router: Router) {
 
   }
@@ -19,5 +17,8 @@ export class SuccessPageComponent {
 
   messageInvitaiton() {
     this.router.navigate(['message']);
+  }
+  back() {
+    this.router.navigate(['']);
   }
 }

@@ -46,6 +46,7 @@ export class CardScreenComponent {
   videoAnimationState = 'initial';
   buttons: 'hidden' | 'show' = 'hidden';
   paymenytConfirmModelRef !: NgbModalRef;
+
  
 
   constructor(public modelService: NgbModal,private messageService: MessageServiceService) {
@@ -53,13 +54,14 @@ export class CardScreenComponent {
   }
 
   ngOnInit() {
-    debugger
       this.userData = this.messageService.getUserDataCollection();
     console.log("hua",this.userData)
   }
+  getRandomScrolldelay() {
+    return Math.floor(Math.random() * 100) + 1; // Generates a random number between 1 and 100
+  }
 
   toggleAnimation() {
-    debugger
     this.buttonState = 'hidden';
     this.leftAnimationState = this.leftAnimationState === 'closed' ? 'open' : 'closed';
     this.rightAnimationState = this.rightAnimationState === 'closed' ? 'open' : 'closed';
@@ -67,5 +69,20 @@ export class CardScreenComponent {
       this.videoAnimationState = 'final';
     }, 500);
 
+  }
+
+
+  playVideo() {
+    const video: HTMLVideoElement | null = document.getElementById('videoPlayer') as HTMLVideoElement;
+    if (video) {
+      video.play();
+    }
+  }
+
+  pauseVideo() {
+    const video: HTMLVideoElement | null = document.getElementById('videoPlayer') as HTMLVideoElement;
+    if (video) {
+      video.pause();
+    }
   }
 }
